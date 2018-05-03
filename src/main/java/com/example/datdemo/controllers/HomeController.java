@@ -10,11 +10,11 @@ public class HomeController {
 
     @GetMapping("/")
     public String index() {
-        return "hello Dat";
+        return "hello Dat 1";
     }
 
     @GetMapping(value = "/hello")
     public String hello() {
-        return "Hello world";
+        return "Hello world 2";
     }
 }

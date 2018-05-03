@@ -23,16 +23,16 @@ script:
     - gradle test
 before_deploy:
     - gradle build
-#deploy:
-#  provider: elasticbeanstalk
-#  access_key_id: $ACCESSKEYID
-#  secret_access_key:
-#    secure: "$SECRETACCESSKEY"
-#  region: "ap-southeast-1"
-#  app: "hocluon"
-#  env: "hocluon-stage"
-#  bucket_name: "elasticbeanstalk-ap-southeast-1-454487760910"
-#  zip_file: "build/libs/hocluon-0.0.1-SNAPSHOT.war"
-#  skip_cleanup: true
-#  on:
-#    branch: master
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESSKEYID
+  secret_access_key:
+    secure: "$SECRETACCESSKEY"
+  region: "ap-southeast-1"
+  app: "Dat Demo"
+  env: "DatDemo-dev"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-454487760910"
+  zip_file: "build/libs/datdemo-0.0.1-SNAPSHOT.jar"
+  skip_cleanup: true
+  on:
+    branch: master
